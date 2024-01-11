@@ -1,7 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: '.env.dev');
+  await loadEnvironment();
   runApp(const MyApp());
+}
+
+//Loading env variables
+Future<void> loadEnvironment() async {
+  String envFileName;
+  print('Attempting to load environment file:');
+  switch (const String.fromEnvironment('FLUTTER_ENV')) {
+    case 'development':
+      envFileName = '.env.dev';
+      break;
+    case 'staging':
+      envFileName = '.env.staging';
+      break;
+    case 'production':
+      envFileName = '.env.prod';
+      break;
+    default:
+      throw Exception('Unknown environment');
+  }
+
+  await dotenv.load(fileName: envFileName);
 }
 
 class MyApp extends StatelessWidget {
@@ -56,6 +80,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  final baseURL = dotenv.env['Base_URl'];
+  final appVersion = dotenv.env['appversion'];
 
   void _incrementCounter() {
     setState(() {
@@ -110,6 +136,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'Base URL: $baseURL',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'APP Version: $appVersion',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
