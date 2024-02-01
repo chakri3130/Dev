@@ -1,0 +1,18 @@
+In flutter you can create different type of flavours for your app
+like - DEV
+     - Staging
+     - Prod
+Using each flavours you can pass different type of BaseURL, Bundle Identifier, App icons, Name of app.
+Now we are going to learn how to setup flavours in ios
+1) Open xcode project (ios folder of flutter app)
+2) Select Runner at project level
+3) Selct info tab
+4) Selct configuartions under info tab (we can able to see Debug,release,Profile)
+5) Duplicate each configartion with like this(Debug-live, Debud-prod).So in confuarations we can see total 6 configartions. Each configuration having 2 types of environments.
+6) Select Runner under Targets section
+7) Select product menu and navigate to like this to create schemes
+8) Product -> Schemes -> Manage Schemes -> New scheme -> Add a name like prod 
+9) same repeat create dev scheme, surely selet stable check-box
+10) delete runner scheme
+11) clean build
+12) Build.

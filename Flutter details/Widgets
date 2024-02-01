@@ -1,0 +1,32 @@
+1) what is Widget? Expain about more in detail.
+Answer: Widget is build block of flutter project. Widget are classes of Dart language.
+Here we are adding widgets using in everyday project
+
+1) StatelessWidget -- when yiu create a StatelessWidget. you can't able to change any data in this widget. Beacuse it's mutable widget
+2) StatefullWidget -- Here we can update the data based on state management. it's a immuatble widget.
+**------ Every page devided into 3 catogeries ----------
+------- Appbar, body, bottonNavigationBarItem--------**
+3) AppBar -- AppBar is widget. Here we can set name of the page, Actions for the page
+            -> mainly used widget in the application.
+            -> Title - to create name of the page
+            -> actions -(it's a list widget) to create action buttons like notifications, cart and etc using actions
+            -> leading -  to create menu icon or icon button in the page
+4) body - body widget dealing with complete releated body of the remaining page.
+            -> here we acn create multiple widgets based on your requirement.
+            -> We can create only one child for widget
+            -> so based on screen design we can add like Center, Row, Column widgets in body widget.
+5) Center -  when you add anything under this widget it will come in center of the screen
+            
+6) Row    -  When you add childrens in this widget. it will align in row wise
+            -> Here we can add mainAxisAlignment or crossAxisAlignment based on your conditions it will align (Center, SpaceBetween,SpaceAround, SpaceEvenly)
+7) Column -  When you add childrens in this widget. it will align column wise. Same like above we can add.
+
+8) TextField - 
+
+9) ElevatedButton -- 
+
+10) OutLineButton -- 
+
+11) InkWell -- if you want add any action for a widget, add InkWell widget. To add action fucntionality like onTap.
+
+
