@@ -21,12 +21,15 @@ Here we are adding widgets using in everyday project
             -> Here we can add mainAxisAlignment or crossAxisAlignment based on your conditions it will align (Center, SpaceBetween,SpaceAround, SpaceEvenly)
 7) Column -  When you add childrens in this widget. it will align column wise. Same like above we can add.
 
-8) TextField - 
+8) TextField - Textfiled widget is famous and well known widget. Textfield widget conatins lot of methods and features. Every textfield widget contains controller. So when we need to get the data or update the data by using controller we can get it.
 
-9) ElevatedButton -- 
+9) ElevatedButton -- Elevated button with coming with particular 
 
-10) OutLineButton -- 
+10) OutLineButton -- Based on condition we can use the button type. It comes with default button style
 
 11) InkWell -- if you want add any action for a widget, add InkWell widget. To add action fucntionality like onTap.
+
+12) RefreshIndicator --  when user want to update the same screen. Click on refresh Indiactor it will fetch the new data from API or DataBase to update the UI
+
 
 

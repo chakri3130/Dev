@@ -1,0 +1,123 @@
+
+1) Name the different types of build modes in Flutter.
+Answer: There are three types of build modes in Flutter. These include:
+
+Debug- It is used to test the apps. On Android Studio, you can find a green play button on the top panel.
+“Flutter run”
+
+Profile- In this mode, some debugging ability is maintained - enough to profile your app's performance, and also, it has the performance as the release mode.
+“Flutter run -- profile”
+
+Release- It is used for deploying the app on marketplaces.
+“Flutter run - - release”
+2) Which widget in Flutter is a box that comes with a different size?
+Answer: SizedBox is a widget in Flutter that allows us to specify an arbitrary size for a widget. It is basically used to add empty space between widgets. SizedBox also supports specifying a specific aspect ratio for its child.
+
+3) How can you test a single Widget?
+Answer: Using the Widget tests technique, you can make sure that various portions of the user interface work as intended without the need for a physical device or simulator. This technique is the best way to isolate small parts of your app and find out whether your code is behaving as expected
+
+4) Types of navigations in flutter?
+Answer: 
+1) Navigator.push() ---> Uses MaterialPageRoute
+2) Navigator.pushNamed() -- >Based on screen Name
+3) Navigator.pushAndPop() ---> making current screen is the new one it uses mainly remove stack from application and example is login screen
+4) Navigator.pop() ---> it will go the back page.
+5) Drawer and bottomNavigationBar -- Menu navigation and Footer navigation
+6) Tabbar and TabView - 
+
+5) Can you state a few examples of stateless widget?
+Answer:  Icon, Text and Contain and more.
+6) Explain the term “Tree shaking” in Flutter?
+Answer: Tree shaking is a method of removing the unused module in the bundle during the development process. Tree shaking serves as a sort of optimization technique that optimizes the code by removing the dead code.
+
+While importing or exporting codes, there might be dead codes hanging around. Removing these dead codes reduces the code size which in turn improves the performance of the application.
+
+7) What is the difference between Flutter run Profile and Flutter run release
+Answer: Profile is build the application like a release mode but it also provide like debug mode also it provides. but in release mode we can release the application for the Appstore or Playstore.
+
+8) What's the role of BuildContext in Flutter?
+Answer:  In Flutter, the BuildContext is an object that provides access to the location of a widget in the widget tree hierarchy and to various services such as Theme, MediaQuery, and Navigator. The BuildContext is used by widgets to access the properties of their parent widget, such as its size, position, and theme. It is is also used to navigate between screens using the Navigator widget.
+
+9) what is the return type when user not specifying anything in flutter?
+Answer: Dynamic -- So user not specifying any return type. Flutter assumes data will be Dynamic. It accepted any value as a return type.
+
+10) Types of constructors in Flutter?
+Answer: Named Constructor, Standard Constructor Factory Constructor.
+
+Standard Constructor: Default constructor with the same name as the class, used for basic object creation and initialization.
+class MyClass {
+  int value;
+
+  // Standard Constructor
+  MyClass(this.value);
+}
+
+void main() {
+  // Creating an object using the standard constructor
+  var obj = MyClass(42);
+}
+
+
+Named Constructor: Additional constructors with custom names, providing alternative ways to create objects with specific configurations.
+class MyClass {
+  int value;
+
+  // Named Constructor
+  MyClass.custom(this.value);
+}
+
+void main() {
+  // Creating an object using the named constructor
+  var obj = MyClass.custom(10);
+}
+
+
+Factory Constructor: A constructor declared with the factory keyword, allowing more control over the object creation process. It may return an existing instance or a different subtype
+class Singleton {
+  static Singleton _instance;
+
+  // Factory Constructor
+  factory Singleton() {
+    if (_instance == null) {
+      _instance = Singleton._internal();
+    }
+    return _instance;
+  }
+
+  Singleton._internal();
+}
+
+void main() {
+  // Creating an object using the factory constructor
+  var obj1 = Singleton();
+  var obj2 = Singleton();
+
+  print(identical(obj1, obj2)); // true (same instance)
+}
+11) What’s the function of the future in Dart?
+Answer: A future function is used to predict a potential error or value that may occur in the future. It can be completed with a value or an error. Here, developers can plug call backs for each case. Some programming languages use “promise” for the same function.
+
+12) Can you tell us what you know about Rune In Dart?
+Answer: In dart programming language strings are a sequence of UTF-16 which is a 16 bit unicode Transformation Format. Rune refers to an integer that is used to describe any Unicode code point.
+
+13) What is the lifecycle of a StatefulWidget?
+Answer: A StatefulWidget’s lifecycle is as follows:
+
+createState
+initState
+didChangeDependencies
+build
+didUpdateWidget
+setState
+deactivate
+dispose
+
+14) What is Flutter Architecture?
+Answer:
+Flutter architecture is comprised of three layers:
+
+Flutter Framework Layer: This is the highest layer in the Flutter architecture and includes the widgets and the Material Design widgets. It also includes APIs for animations, gestures, and routing.
+
+Engine Layer: This is the core layer of the Flutter architecture that contains the rendering engine, which handles graphics and text rendering. It also includes the Skia graphics library, used to draw graphics on the screen.
+
+Platform Layer: This is the lowest layer in the Flutter architecture and provides access to the native platform APIs. It includes plugins and packages that allow Flutter to interact with the device's hardware and software, such as the camera, location services, and sensors.
